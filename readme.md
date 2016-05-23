@@ -1,9 +1,25 @@
-# MongoDB
-## Learning Objectives
+<!--
+Market: SF
+-->
 
-- Compare and contrast relational to document based (NoSql)
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+
+# MongoDB
+
+## Why is this important?
+*This workshop is important because:*
+- As of July 2015, MongoDB is the fourth most popular type of database management system, and the most popular for document stores.
+- *aside*: [The top five](http://db-engines.com/en/ranking).
+- MongoDB uses a JSON-like data structure (called BSON or Binary JSON) so it integrates easily into JavaScript Applications
+
+## What are the objectives?
+*After this workshop, developers will be able to:*
 - Setup local mongo db server
 - CRUD documents using mongo CLI
+
+## Where should we be now?
+*Before this workshop, developers should already be able to:*
+- Run Node in the console
 
 ## Framing
 
@@ -12,31 +28,7 @@
 - High Availability
 - Automatic Scaling
 
-> We've learned a considerable amount about relational databases. We use join-tables & foreign keys in relational databases to query our database in complex ways. These joins can result in complicated queries and be taxing on a database. When dealing with **less complex associations**, a non-relational databases may be more effective. This not to say Mongo is a better or worse solution than Postgres or other SQL libraries, but an alternative solution.
-
-![CAP](http://d2-data.com/douglas-bernardini/wp-content/uploads/2015/09/CAP-SAMPLES.jpg)
-
-The above chart illustrates the CAP theorem, which states that it is impossible for a distributed computer system to simultaneously provide all three of the following guarantees:
-
-* Consistency — all nodes on the network see the same data at the same time)
-* Availability — a guarantee that every request receives a response
-* Partition tolerance — a partitioned system continues to operate despite network failures
-
-##Relational SQL Databases vs. MongoDB Terminology
-
-![Relational vs Non-relational](https://camo.githubusercontent.com/fbd52e2a254672a98b2dd08d1e20fac4a4706f0f/687474703a2f2f342e62702e626c6f6773706f742e636f6d2f2d65647a325f5172467643452f556e7a42684b5a453346492f41414141414141414145732f62544573716e5a465458772f73313630302f53514c2d4d6f6e676f44422b436f72726573706f6e64656e63652e504e47)
-![tables vs documents](https://camo.githubusercontent.com/825f5c750e74e38094764159461de96cd04297d9/687474703a2f2f64617461636f6e6f6d792e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031342f30372f53514c2d76732e2d4e6f53514c2e706e67)
-
-##SQL vs noSQL
-A great analogy from a fellow StackOverflow:
-
->"NoSQL (or schema-less, or document-store, or what-have-you) databases store information like you would recipes in a book. When you want to know how to make a cake, you go to that recipe, and all of the information about how to make that cake (ingredients, preparation, mixing, baking, finishing, etc.) are all on that one page.
-
->SQL is like shopping for the ingredients for the recipe. In order to get all of your ingredients into your cart, you have to go to many different aisles to get each ingredient. When you are done shopping, your grocery cart will be full of all of the ingredients you had to run around and collect.
-
->Wouldn't it be nicer if there was a store was organized by recipe, so you could go to one place in the store and grab everything you need from that one spot? Granted you'll find ingredients like eggs in 50 different places, so there's a bit of overhead when stocking the shelves, but from a consumer standpoint it was much easier/faster to find what they were looking for."
-
--[mgoffin, Jan 20 '13 at 19:15](http://stackoverflow.com/questions/14428069/sql-and-nosql-analogy-for-the-non-technical/14428221#14428221)  
+> Later in the course we will learn about relational databases, which use join-tables & foreign keys in relational databases to query our database in complex ways. NoSQL databases are an alternative that can be great for less complex databases. Because NoSQL databases are structured more simply, applications can read and write to them faster.
 
 ## Documents
 
@@ -95,20 +87,12 @@ MongoDB stores documents in collections.
 - Does **NOT** require its documents to have the same schema.
 - Documents stored in a collection must have a unique `_id` field that acts as a primary key.
 
-#### Key Differences of MongoDB
-
-- **Schema-less**
-The documents in a MongoDB collection can have completely different types and number of fields from each other.<br>__How does this compare to a SQL database like PostgreSQL?__
-
-- **No Join Tables**
-In a SQL/Relational database, we break up related data into separate tables.
-
 In MongoDB, we often _embed_ related data in a single document, you'll see an example of this later.
 
 The supporters of MongoDB highlight the lack of table joins as a performance advantage since joins are expensive in terms of computer processing.
 
 
-## Installing, Creating a DB, and Inserting Documents - Code-along
+## Installing, Creating a DB, and Inserting Documents
 
 #### Installation
 
@@ -141,14 +125,14 @@ The mongo interface will load and change the prompt will change to `>`.
 
 List the shell's commands available: `> help`
 
-## Think-pair-share (2min):
+## Think-pair-share:
 - What jumps out as important?
 - Try it
 
 ## Helpful commands
 - `show dbs`: show database names
-- `show collections`:  show collections in current database
 - `use <db_name>`: set current database
+- `show collections`:  show collections in current database
 - `db.foo.find()`: list objects in collection foo
 
 Also:
@@ -265,7 +249,7 @@ db.restaurants.insert([
 db.restaurants.count()
 ```
 
-#### Find by Conditions (like `where`)
+#### Find by Conditions
 
 Key: Value pairs
 
@@ -305,11 +289,13 @@ db.restaurants.remove({ name: "Cookies Corner" })
 
 > Note: this will remove all restaurants with the name `"Cookies Corner"`
 
-## Quick Review
+## Closing Thoughts
+- MongoDB is a popular open-source NoSQL database system. It includes the following components:
+  1.  mongod - The database process.
+  2. mongos - The sharding controller that works behind the scenes.
+  3. mongo  - The database shell (uses interactive javascript).
 
-* Compare and contrast relational with non-relational databases. What give an example of when each would be useful.
-* What is a `collection` comparable to in a relational (SQL) database? What about a `document`? How about a `field`?
-
-## Helpful References
+## Additional Resources
 - [CRUD Intro](http://docs.mongodb.org/manual/core/crud-introduction/)
 - [CRUD Commands](http://docs.mongodb.org/manual/reference/crud/)
+- [MongoDB's GitHub](https://github.com/mongodb/mongo)
