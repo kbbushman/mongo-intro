@@ -8,9 +8,8 @@ Market: SF
 
 ## Why is this important?
 *This workshop is important because:*
-- As of July 2015, MongoDB is the fourth most popular type of database management system, and the most popular for document stores.
-- *aside*: [The top five](http://db-engines.com/en/ranking).
-- MongoDB uses a JSON-like data structure (called BSON or Binary JSON) so it integrates easily into JavaScript Applications
+
+Mongo gives us a way to persist unstructured data in a JSON-like format.
 
 ## What are the objectives?
 *After this workshop, developers will be able to:*
