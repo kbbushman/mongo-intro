@@ -21,7 +21,7 @@ A Mongo database gives us a way to persist unstructured data in a JSON-like form
 - Run Node in the console
 - Create a server that can respond to requests from a client
 
-## Framing
+## MongoDB
 
 [Mongo](https://www.mongodb.org) is an open-source document-based non-relational data store that provides:
 - High Performance
@@ -124,10 +124,6 @@ Start the app in terminal by typing `mongo`. If you got an error, check if `mong
 The mongo interface will load and change the prompt will change to `>`.
 
 List the shell's commands available: `> help`
-
-## Think-pair-share:
-- What jumps out as important?
-- Try it
 
 ## Helpful commands
 - `show dbs`: show database names
