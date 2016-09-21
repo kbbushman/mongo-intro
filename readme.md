@@ -9,7 +9,7 @@ Market: SF
 ## Why is this important?
 *This workshop is important because:*
 
-Mongo gives us a way to persist unstructured data in a JSON-like format.
+A Mongo database gives us a way to persist unstructured data in a JSON-like format.
 
 ## What are the objectives?
 *After this workshop, developers will be able to:*
