@@ -13,8 +13,8 @@ A Mongo database gives us a way to persist unstructured data in a JSON-like form
 
 ## What are the objectives?
 *After this workshop, developers will be able to:*
-- Setup local mongo db server
-- CRUD documents using mongo CLI
+- Setup a local Mongo server
+- CRUD documents using the Mongo CLI
 
 ## Where should we be now?
 *Before this workshop, developers should already be able to:*
