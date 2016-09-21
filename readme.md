@@ -151,9 +151,7 @@ Verify:
 restaurant_db
 ```
 
-Common Mistake:
-`show dbs`
-> note we don't see restaurants listed. It isn't until we add a document to our database does it list the DB in `show dbs`
+> Note: we don't see restaurants listed. It isn't until we add a document to our database does it list the DB in `show dbs`
 
 ## Create a record
 
