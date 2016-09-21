@@ -19,6 +19,7 @@ A Mongo database gives us a way to persist unstructured data in a JSON-like form
 ## Where should we be now?
 *Before this workshop, developers should already be able to:*
 - Run Node in the console
+- Create a server that can respond to requests from a client
 
 ## Framing
 
